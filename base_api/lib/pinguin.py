@@ -222,7 +222,7 @@ def get_dictlist_from_model(model, spec, **kwargs):
     """
     domain = kwargs.get("domain", [])
     offset = kwargs.get("offset", 0)
-    limit = kwargs.get("limit")
+    limit = kwargs.get("limit",0)
     order = kwargs.get("order")
     include_fields = kwargs.get(
         "include_fields", ()

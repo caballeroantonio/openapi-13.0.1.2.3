@@ -111,6 +111,7 @@ class ApiV1Controller(http.Controller):
             modelname=model,
             success_code=pinguin.CODE__success,
             out_fields=conf["out_fields_read_multi"],
+			**kw
         )
 
     # ReadOne (optional: include_fields, exclude_fields)

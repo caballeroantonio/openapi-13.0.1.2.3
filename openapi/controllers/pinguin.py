@@ -595,7 +595,7 @@ def wrap__resource__create_one(modelname, context, data, success_code, out_field
     return successful_response(success_code, out_data)
 
 
-def wrap__resource__read_all(modelname, success_code, out_fields):
+def wrap__resource__read_all(modelname, success_code, out_fields, **kwargs):
     """function to read all records.
 
     :param str modelname: The name of the model.
@@ -605,7 +605,7 @@ def wrap__resource__read_all(modelname, success_code, out_fields):
     :returns: successful response with records data
     :rtype: werkzeug.wrappers.Response
     """
-    data = get_dictlist_from_model(modelname, out_fields)
+    data = get_dictlist_from_model(modelname, out_fields, **kwargs)
     return successful_response(success_code, data)
 
 
